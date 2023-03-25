@@ -1,7 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# FIGMA 
+# FIGMA/DESIGN
+
 https://www.figma.com/file/1sBMn9UJa9juJL5kPHE2uI/ZEON-Company-Profile-(Community)?t=2XDH60u9KPrRCy8N-0
+https://salient.tailwindui.com/
 
 ## Getting Started
 
