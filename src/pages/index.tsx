@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Navbar from '@/components/organisms/Navbar'
+import About from '@/components/organisms/About'
 
 export default function Home() {
     return (
@@ -19,9 +20,8 @@ export default function Home() {
 
             <div className='container mx-auto'>
                 <Navbar />
+                <About />
             </div>
-
-
         </>
     )
 }

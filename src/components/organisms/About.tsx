@@ -1,7 +1,7 @@
 import React from "react";
 
 import Image from "next/image";
-import about from "../../json/about.json"
+import about from "../../../json/about.json"
 
 
 const About = () => {
