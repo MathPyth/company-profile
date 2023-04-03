@@ -1,6 +1,8 @@
 import React from "react";
 
 import Image from "next/image";
+import about from "../../json/about.json"
+
 
 const About = () => {
     return (
@@ -12,11 +14,7 @@ const About = () => {
                         <div className="flex gap-1"><p>Get</p><p className="underline"> Your App</p></div>Done ASAP!{' '}
                     </h1>
                     <p>
-                        Welcome to the website of a freelance web developer with a passion
-                        for helping college students create professional, engaging websites for their academic assignments and thesis projects. With years of experience and a degree in computer science,
-                        they offer personalized services tailored
-                        to their clients needs and schedules. Potential clients can contact them
-                        to learn more about how they can help bring their vision to life.
+                        {about.description}
                     </p>
                 </div>
                 <div className="px-4">
