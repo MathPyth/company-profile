@@ -28,4 +28,3 @@ module.exports = {
     plugins: [],
 }
 
-rgb(36, 99, 234)
