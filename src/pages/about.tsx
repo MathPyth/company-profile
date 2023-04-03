@@ -15,7 +15,7 @@ const About = () => {
                         Welcome to the website of a freelance web developer with a passion
                         for helping college students create professional, engaging websites for their academic assignments and thesis projects. With years of experience and a degree in computer science,
                         they offer personalized services tailored
-                        to their clients' needs and schedules. Potential clients can contact them
+                        to their clients needs and schedules. Potential clients can contact them
                         to learn more about how they can help bring their vision to life.
                     </p>
                 </div>
