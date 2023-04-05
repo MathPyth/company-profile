@@ -26,8 +26,11 @@ const Layout = (props: Props) => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navbar />
-            <main className={roboto.className}>{children}</main>
+            {/* <Navbar /> */}
+            <main className={roboto.className}>
+                <Navbar />
+                {children}
+            </main>
         </>
     )
 }
