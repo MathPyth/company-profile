@@ -3,12 +3,13 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import htmlhead from '../../../json/htmlhead.json'
 import Navbar from '../organisms/Navbar'
+import Footer from '../organisms/Footer'
 
 type Props = {
     children: React.ReactNode
 }
 const roboto = Inter({
-    weight: ['400', '700'],
+    weight: ['300', '400', '500', '600', '700'],
     style: ['normal'],
     subsets: ['latin'],
     display: 'swap',
@@ -26,10 +27,10 @@ const Layout = (props: Props) => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            {/* <Navbar /> */}
             <main className={roboto.className}>
                 <Navbar />
                 {children}
+                <Footer />
             </main>
         </>
     )
