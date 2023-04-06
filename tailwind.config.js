@@ -15,6 +15,7 @@ module.exports = {
                 mathpyDark: '#0F172A',
                 mathpyWhite: '#FFFEFE',
                 mathpygray: '#8A97A9',
+                mathpyDarkGray: '#FEFFFE',
             },
             fontSize: {
                 smallest: '0.875rem',
@@ -27,4 +28,3 @@ module.exports = {
     },
     plugins: [],
 }
-

@@ -1,8 +1,7 @@
 import React from 'react'
 import jumbotron from '../../../json/jumbotron.json'
-type Props = {}
 
-const Jumbotron = (props: Props) => {
+const Jumbotron = () => {
     return (
         <div className="h-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-20 text-center lg:pt-32 __web-inspector-hide-shortcut__">
             <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
