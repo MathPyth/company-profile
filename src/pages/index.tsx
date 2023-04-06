@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '@/components/organisms/Navbar'
 import About from '@/components/organisms/About'
 import Jumbotron from '@/components/organisms/Jumbotron'
+import Project from '@/components/organisms/Project'
 
 export default function Home() {
     return (
@@ -19,10 +20,13 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="container mx-auto">
+            <div className='container mx-auto'>
                 <Navbar />
                 <Jumbotron />
+                <hr />
                 <About />
+                <hr />
+                <Project />
             </div>
         </>
     )
