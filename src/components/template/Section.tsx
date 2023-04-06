@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 import React from 'react'
+import Project from '../organisms/Project'
 
 const About = dynamic(() => import('../organisms/About'), {
     loading: () => <p>Loading...</p>,
@@ -14,6 +15,7 @@ const Section = () => {
         <div className="container mx-auto">
             <Jumbotron />
             <About />
+            <Project />
         </div>
     )
 }

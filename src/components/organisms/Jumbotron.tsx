@@ -3,7 +3,7 @@ import jumbotron from '../../../json/jumbotron.json'
 
 const Jumbotron = () => {
     return (
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-20 text-center lg:pt-32 __web-inspector-hide-shortcut__">
+        <div className="h-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-20 text-center lg:pt-32 __web-inspector-hide-shortcut__">
             <h1 className="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
                 Mathpy
                 <span className="relative whitespace-nowrap text-blue-600">
@@ -30,7 +30,6 @@ const Jumbotron = () => {
                     Contact Us
                 </a>
             </div>
-            <div className="mt-36 lg:mt-44" />
         </div>
     )
 }
