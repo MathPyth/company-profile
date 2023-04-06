@@ -1,12 +1,12 @@
 import React from 'react'
 
 import Image from 'next/image'
-import about from '../../../json/about.json'
-import Typography from '../atoms/Typography'
+import about from '../../../../json/about.json'
+import Typography from '../../atoms/Typography'
 
 const About = () => {
     return (
-        <div className="container mx-auto">
+        <div>
             <Typography
                 size={'large'}
                 fontFamily={'lexend'}

@@ -1,5 +1,5 @@
 import React from 'react'
-import jumbotron from '../../../json/jumbotron.json'
+import jumbotron from '../../../../json/jumbotron.json'
 
 const Jumbotron = () => {
     return (
