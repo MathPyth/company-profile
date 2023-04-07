@@ -1,32 +1,54 @@
-import React from "react";
+import React from 'react'
 
-import Image from "next/image";
-import about from "../../../json/about.json"
-
+import Image from 'next/image'
+import about from '../../../json/about.json'
+import Typography from '../atoms/Typography'
 
 const About = () => {
     return (
         <div className="container mx-auto">
-            <h1 className="text-4xl font-bold text-center" >About Us</h1>
-            <div className="mt-8 grid w-full grid-cols-1 justify-center px-8 md:grid-cols-2 gap-x-8">
-                <div>
-                    <h1 className='mb-2 text-4xl font-semibold'>
-                        <div className="flex gap-1"><p>Get</p><p className="underline"> Your App</p></div>Done ASAP!{' '}
-                    </h1>
-                    <p>
+            <Typography
+                size={'large'}
+                fontFamily={'lexend'}
+                color={'light'}
+                fontWeight="semi-bold"
+                className="text-4xl font-bold text-center"
+            >
+                About Us
+            </Typography>
+            <div className="">
+                <div className="mt-8 sm:px-48 px-12 flex">
+                    <Typography
+                        size={'small'}
+                        fontFamily={'inter'}
+                        color={'light'}
+                        fontWeight="light"
+                        className="text-center"
+                    >
                         {about.description}
-                    </p>
+                    </Typography>
                 </div>
-                <div className="px-4">
+                <div className="px-4  ">
                     <Image
+                        className="mx-auto my-12 border border-slate-300 pt-12 pb-28 sm:px-40 px-8 rounded-lg  box-content shadow-xl"
                         src="/undraw_startup_life.svg"
                         width={300}
                         height={300}
                         alt="logo"
                     />
+                    <Typography
+                        size={'medium'}
+                        fontFamily={'inter'}
+                        color={'light'}
+                        fontWeight="normal"
+                        className="text-center -mt-8"
+                    >
+                        &quot;Get You App Done ASAP&quot;
+                    </Typography>
                 </div>
             </div>
         </div>
+
     )
 }
 
