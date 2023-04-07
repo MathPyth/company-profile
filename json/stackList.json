@@ -1,0 +1,12 @@
+[
+    { "name": "Typescript", "img": "/icons/typescript.svg" },
+    { "name": "Golang", "img": "/icons/go.svg" },
+    { "name": "NestJs", "img": "/icons/nest.svg" },
+    { "name": "Django", "img": "/icons/django.svg" },
+    { "name": "Java", "img": "/icons/java.svg" },
+    { "name": "Springboot", "img": "/icons/spring.svg" },
+    { "name": "Python", "img": "/icons/python.svg" },
+    { "name": "NextJs", "img": "/icons/nextjs.svg" },
+    { "name": "Astro", "img": "/icons/astro.svg" },
+    { "name": "Laravel", "img": "/icons/laravel.svg" }
+]

@@ -1,20 +1,22 @@
 import dynamic from 'next/dynamic'
 import React from 'react'
-import Project from '../organisms/Project'
+import Project from '../organisms/sections/Project'
+import Porfofolio from '../organisms/sections/Porfofolio'
 
-const About = dynamic(() => import('../organisms/About'), {
+const About = dynamic(() => import('../organisms/sections/About'), {
     loading: () => <p>Loading...</p>,
 })
 
-const Jumbotron = dynamic(() => import('../organisms/Jumbotron'), {
+const Jumbotron = dynamic(() => import('../organisms/sections/Jumbotron'), {
     loading: () => <p>Loading...</p>,
 })
 
 const Section = () => {
     return (
-        <div className="container mx-auto">
+        <div className="flex flex-col gap-32">
             <Jumbotron />
             <About />
+            <Porfofolio />
             <Project />
         </div>
     )

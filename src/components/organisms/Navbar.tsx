@@ -16,7 +16,7 @@ const navigations = [
 
 const Navbar = () => {
     return (
-        <>
+        <div className="md:mx-16 mx-4">
             <svg
                 className="absolute inset-y-0 right-0 hidden  h-full w-48 translate-x-1/2 transform text-white lg:hidden"
                 fill="currentColor"
@@ -63,7 +63,7 @@ const Navbar = () => {
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="font-medium text-gray-500 hover:text-gray-900"
+                                    className="font-light text-gray-500 hover:text-gray-900"
                                 >
                                     {item.name}
                                 </a>
@@ -116,7 +116,7 @@ const Navbar = () => {
                     </Popover.Panel>
                 </Transition>
             </Popover>
-        </>
+        </div>
     )
 }
 

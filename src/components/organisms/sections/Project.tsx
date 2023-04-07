@@ -1,8 +1,7 @@
-import React from "react";
-import Card from "../molecules/Card";
-import project from "../../../json/project.json"
-import Typography from "../atoms/Typography";
-
+import React from 'react'
+import Card from '../../molecules/Card'
+import project from '../../../../json/project.json'
+import Typography from '../../atoms/Typography'
 
 const Project = () => {
     return (
@@ -32,4 +31,4 @@ const Project = () => {
     )
 }
 
-export default Project;
+export default Project
