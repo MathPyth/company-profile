@@ -14,7 +14,7 @@ type Props = {
     size: typeof fontSizing[number]
     fontFamily: 'lexend' | 'inter'
     fontWeight?: typeof fontWeight[number]
-    color: 'primary' | 'secondary' | 'tertiary' | 'light'
+    color: 'primary' | 'secondary' | 'tertiary' | 'light' | 'white'
     className?: string
     children: React.ReactNode
 } & React.ComponentPropsWithoutRef<'p'>
@@ -42,6 +42,7 @@ const Typography = forwardRef<HTMLParagraphElement, Props>(
                         color === 'secondary' && ['text-mathpyDark'],
                         color === 'tertiary' && ['text-mathpylue'],
                         color === 'light' && ['text-slate-700'],
+                        color === 'white' && ['text-slate-200'],
                     ],
                     [
                         size === 'smallest' && ['text-smallest'],

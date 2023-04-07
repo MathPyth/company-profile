@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Chat Gpt",
+        "descrition": "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.",
+        "img": "/ss.png"
+    },
+    {
+        "title": "FaceBook",
+        "descrition": "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.",
+        "img": "/ss.png",
+        "whiteCard": true
+    },
+    {
+        "title": "Twitter",
+        "descrition": "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.",
+        "img": "/ss.png"
+    },
+    {
+        "title": "Chat Gpt",
+        "descrition": "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.",
+        "img": "/ss.png",
+        "whiteCard": true
+    },
+    {
+        "title": "FaceBook",
+        "descrition": "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.",
+        "img": "/ss.png"
+    },
+    {
+        "title": "Twitter",
+        "descrition": "ChatGPT is a sibling model to InstructGPT, which is trained to follow an instruction in a prompt and provide a detailed response.",
+        "img": "/ss.png",
+        "whiteCard": true
+    }
+]

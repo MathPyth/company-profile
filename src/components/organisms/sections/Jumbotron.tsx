@@ -1,5 +1,6 @@
 import React from 'react'
-import jumbotron from '../../../json/jumbotron.json'
+import jumbotron from '../../../../json/jumbotron.json'
+import StackList from '../StackList'
 
 const Jumbotron = () => {
     return (
@@ -30,6 +31,7 @@ const Jumbotron = () => {
                     Contact Us
                 </a>
             </div>
+            <StackList />
         </div>
     )
 }
