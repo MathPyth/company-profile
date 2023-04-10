@@ -3,7 +3,7 @@ import React from 'react'
 import { Inter } from 'next/font/google'
 import htmlhead from '../../../json/htmlhead.json'
 import Navbar from '../organisms/Navbar'
-import Footer from '../organisms/Footer'
+import dynamic from 'next/dynamic'
 
 type Props = {
     children: React.ReactNode
@@ -14,6 +14,11 @@ const roboto = Inter({
     subsets: ['latin'],
     display: 'swap',
 })
+
+const Footer = dynamic(() => import('../organisms/Footer'), {
+    loading: () => <p>Loading...</p>,
+})
+
 const Layout = (props: Props) => {
     const { children } = props
     return (
