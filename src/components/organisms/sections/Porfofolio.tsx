@@ -1,7 +1,7 @@
 import Typography from '@/components/atoms/Typography'
 import Image from 'next/image'
 import React from 'react'
-import Card from '../Card'
+import Card from '../../molecules/Card/Card'
 import PortoList from '../../../../json/portofolio.json'
 import Animate from '@/components/template/Animate'
 

@@ -11,7 +11,7 @@ const fontSizing = [
 const fontWeight = ['light', 'normal', 'bold', 'semi-bold'] as const
 
 type Props = {
-    size: typeof fontSizing[number]
+    size?: typeof fontSizing[number]
     fontFamily: 'lexend' | 'inter'
     fontWeight?: typeof fontWeight[number]
     color: 'primary' | 'secondary' | 'tertiary' | 'light' | 'white'
