@@ -1,12 +1,8 @@
 import { readdirSync, readFileSync } from 'fs'
 import matter from 'gray-matter'
-// import { bundleMDX } from 'mdx-bundler'
 import path, { join } from 'path'
-// import readingTime from 'reading-time'
-// import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-// import rehypePrism from 'rehype-prism-plus'
-// import rehypeSlug from 'rehype-slug'
-// import remarkGfm from 'remark-gfm'
+import readingTime from 'reading-time'
+import { serialize } from 'next-mdx-remote/serialize'
 
 // import { ContentType, Frontmatter, PickFrontmatter } from '@/types/frontmatters'
 
@@ -31,47 +27,22 @@ export async function getFiles() {
     return readdirSync(join(process.cwd(), 'src', 'contents'))
 }
 
-// export async function getFileBySlug(type: ContentType, slug: string) {
-//     const source = slug
-//         ? readFileSync(
-//               join(process.cwd(), 'src', 'contents', type, `${slug}.mdx`),
-//               'utf8'
-//           )
-//         : readFileSync(
-//               join(process.cwd(), 'src', 'contents', `${type}.mdx`),
-//               'utf8'
-//           )
+export async function getFileBySlug(slug: string) {
+    const source = readFileSync(
+        join(process.cwd(), 'src', 'posts', `${slug}.mdx`),
+        'utf8'
+    )
 
-//     const { code, frontmatter } = await bundleMDX(source, {
-//         xdmOptions(options) {
-//             options.remarkPlugins = [
-//                 ...(options?.remarkPlugins ?? []),
-//                 remarkGfm,
-//             ]
-//             options.rehypePlugins = [
-//                 ...(options?.rehypePlugins ?? []),
-//                 rehypeSlug,
-//                 rehypePrism,
-//                 [
-//                     rehypeAutolinkHeadings,
-//                     {
-//                         properties: {
-//                             className: ['hash-anchor'],
-//                         },
-//                     },
-//                 ],
-//             ]
-//             return options
-//         },
-//     })
+    const { data: frontMatter, content } = matter(source)
+    const serializedContent = await serialize(content)
 
-//     return {
-//         code,
-//         frontmatter: {
-//             wordCount: source.split(/\s+/gu).length,
-//             readingTime: readingTime(source),
-//             slug: slug || null,
-//             ...frontmatter,
-//         },
-//     }
-// }
+    return {
+        serializedContent,
+        frontmatter: {
+            wordCount: source.split(/\s+/gu).length,
+            readingTime: readingTime(source),
+            slug: slug || null,
+            rest: { ...frontMatter },
+        },
+    }
+}

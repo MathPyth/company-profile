@@ -18,6 +18,15 @@ const About = () => {
                 >
                     About Us
                 </Typography>
+                <Typography
+                    size={'smallest'}
+                    fontFamily={'inter'}
+                    color={'light'}
+                    fontWeight="light"
+                    className="text-center mt-2"
+                >
+                    Get You App Done ASAP
+                </Typography>
                 <div className="">
                     <div className="mt-8 sm:px-48 px-12 flex">
                         <Typography
@@ -38,15 +47,6 @@ const About = () => {
                             height={300}
                             alt="logo"
                         />
-                        <Typography
-                            size={'medium'}
-                            fontFamily={'inter'}
-                            color={'light'}
-                            fontWeight="normal"
-                            className="text-center -mt-8"
-                        >
-                            &quot;Get You App Done ASAP&quot;
-                        </Typography>
                     </div>
                 </div>
             </div>

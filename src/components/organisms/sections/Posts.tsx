@@ -3,10 +3,8 @@ import CardPosts from '@/components/molecules/Card/CardPosts'
 import Animate from '@/components/template/Animate'
 import { postsType } from '@/types'
 import React from 'react'
-// import project from '../../../../json/project.json'
 
 const Posts = ({ posts }: { posts: postsType[] }) => {
-    console.log(posts)
     return (
         <div className="container mx-auto my-8">
             <Animate transition="fade">

@@ -6,12 +6,21 @@ thumbnailUrl: 'https://images2.alphacoders.com/864/864120.jpg'
 tags: ['functions', 'javascript']
 ---
 
+## Introduction
+
 <div>
     This is a blog post about <strong>functions</strong>. <br />
     We'll learn what functions are, how to write functions, and how to use them.
 </div>
 
-<br />
+<Image
+    alt="init-img"
+    src={'https://images2.alphacoders.com/864/864120.jpg'}
+    width={618}
+    height={295}
+    loader={({ src }) => `${src}`}
+/>
+
 
 ### This is a Markdown subheading
 
@@ -25,9 +34,16 @@ We just used a `###` subheading in our blog post.
   `}
 </SyntaxHighlighter>
 
-// this is a code block const doSomething = () => { return console.log('hey') }
+<div>Here I'm using a component inside my MarkDown file: </div>
 
-<div>
-    Here I'm using a component inside my MarkDown file:{' '}
-    {<Button text={'Click me'} />}
-</div>
+## This is a Markdown subheading
+
+We just used a `###` subheading in our blog post.
+
+<SyntaxHighlighter language="javascript">
+    {`
+    const doStuff = () => {
+      return console.log('hey')
+    }
+  `}
+</SyntaxHighlighter>
