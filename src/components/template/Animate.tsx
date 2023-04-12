@@ -19,7 +19,7 @@ const transitionHandler = (
             return 'translateX(200px)'
         case 'top':
             return 'translateY(-100px)'
-        case 'top':
+        case 'bottom':
             return 'translateY(100px)'
         default:
             return 'none'

@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic'
 
 type Props = {
     children: React.ReactNode
+    title?: string
 }
 const roboto = Inter({
     weight: ['300', '400', '500', '600', '700'],
@@ -20,11 +21,11 @@ const Footer = dynamic(() => import('../organisms/Footer'), {
 })
 
 const Layout = (props: Props) => {
-    const { children } = props
+    const { children, title } = props
     return (
         <>
             <Head>
-                <title>{htmlhead.title}</title>
+                <title>{!title ? htmlhead.title : title}</title>
                 <meta name={htmlhead.title} content={htmlhead.content} />
                 <meta
                     name="viewport"
