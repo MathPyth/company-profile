@@ -16,7 +16,7 @@ const navigations = [
 
 const Navbar = () => {
     return (
-        <div className="md:mx-16 mx-4">
+        <div className="md:mx-16 mx-0">
             <svg
                 className="absolute inset-y-0 right-0 hidden  h-full w-48 translate-x-1/2 transform text-white lg:hidden"
                 fill="currentColor"
