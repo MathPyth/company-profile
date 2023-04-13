@@ -3,8 +3,7 @@ import matter from 'gray-matter'
 import path, { join } from 'path'
 import readingTime from 'reading-time'
 import { serialize } from 'next-mdx-remote/serialize'
-
-// import { ContentType, Frontmatter, PickFrontmatter } from '@/types/frontmatters'
+import rehypeSlug from 'rehype-slug'
 
 export function getContents() {
     const files = readdirSync(path.join('src', 'posts'))
@@ -33,8 +32,13 @@ export async function getFileBySlug(slug: string) {
         'utf8'
     )
 
+    const options = {
+        mdxOptions: {
+            rehypePlugins: [rehypeSlug],
+        },
+    }
     const { data: frontMatter, content } = matter(source)
-    const serializedContent = await serialize(content)
+    const serializedContent = await serialize(content, options)
 
     return {
         serializedContent,
