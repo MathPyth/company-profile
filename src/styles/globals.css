@@ -6,3 +6,15 @@ body {
     /* width: 100vw; */
     overflow-x: hidden;
 }
+
+.no-preflight h1,
+.no-preflight h2,
+.no-preflight h3,
+.no-preflight h4,
+.no-preflight h5,
+.no-preflight h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}

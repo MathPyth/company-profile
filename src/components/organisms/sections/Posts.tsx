@@ -24,6 +24,7 @@ const Posts = ({ posts }: { posts: postsType[] }) => {
                         {posts.map((item) => (
                             <CardPosts
                                 key={item.slug}
+                                slug={item.slug}
                                 title={item.frontMatter.title}
                                 description={item.frontMatter.description}
                                 image={item.frontMatter.thumbnailUrl}

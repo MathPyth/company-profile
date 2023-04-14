@@ -1,10 +1,16 @@
 import Typography from '@/components/atoms/Typography'
 import MDXComponents from '@/components/molecules/MDX/MDXComponents'
 import TableOfContents from '@/components/molecules/TableOfContents'
+import RecomendationPostsList from '@/components/organisms/RecomendationPostsList'
 import Layout from '@/components/template/Layout'
-import { getContents, getFileBySlug } from '@/helper/mdx.helper'
+import {
+    getContents,
+    getFileBySlug,
+    getRecommendations,
+} from '@/helper/mdx.helper'
 import { useHandleTableOfContents } from '@/hooks/useHandleTableOfContents'
 import useScrollSpy from '@/hooks/useScrollSpy'
+import { postsType } from '@/types'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import React from 'react'
@@ -20,9 +26,14 @@ export type frontMatterContentType = {
 type Props = {
     serializedContent: MDXRemoteSerializeResult
     frontmatter: frontMatterContentType
+    recomendationPosts: postsType[]
 }
 
-const index = ({ serializedContent, frontmatter }: Props) => {
+const index = ({
+    serializedContent,
+    frontmatter,
+    recomendationPosts,
+}: Props) => {
     //#region  //*=========== Scrollspy ===========
     const activeSection = useScrollSpy()
 
@@ -31,10 +42,10 @@ const index = ({ serializedContent, frontmatter }: Props) => {
     return (
         <Layout title={frontmatter.rest.title}>
             <div className="w-full p-4 md:p-20 relative container mx-auto my-4">
-                <main className=" w-full  prose-sm md:prose-xl p-0 m-0 0">
+                <main className="max-w-full w-full prose p-0 m-0 0">
                     <div className="w-full">
                         <h1 className="p-0 m-0">{frontmatter.rest.title}</h1>
-                        <div className="-mt-4 md:-mt-10">
+                        <div>
                             <Typography
                                 size={'smallest'}
                                 fontFamily={'lexend'}
@@ -67,15 +78,15 @@ const index = ({ serializedContent, frontmatter }: Props) => {
                             </div>
                         </div>
                     </div>
-                    <div className=" flex gap-4  w-full border-t border-slate-30">
-                        <article className="mdx grow ">
+                    <div className=" flex gap-6  w-full border-t border-slate-30">
+                        <article className="mdx grow mt-4">
                             <MDXRemote
                                 {...serializedContent}
                                 components={MDXComponents}
                             />
                         </article>
                         <aside className="flex-none w-42 hidden md:block">
-                            <div className="sticky top-32">
+                            <div className="sticky top-4">
                                 <TableOfContents
                                     minLevel={minLevel}
                                     toc={toc}
@@ -83,6 +94,9 @@ const index = ({ serializedContent, frontmatter }: Props) => {
                                 />
                             </div>
                         </aside>
+                    </div>
+                    <div className="w-full ">
+                        <RecomendationPostsList posts={recomendationPosts} />
                     </div>
                 </main>
             </div>
@@ -110,7 +124,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         params?.slug as string
     )
 
+    const recomendationPosts = await getRecommendations(params?.slug as string)
+
     return {
-        props: { serializedContent, frontmatter },
+        props: { serializedContent, frontmatter, recomendationPosts },
     }
 }

@@ -6,12 +6,13 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { AiOutlineClose } from 'react-icons/ai'
 
 import Image from 'next/image'
+import Link from 'next/link'
 
 const navigations = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Project', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '#about' },
+    { name: 'Project', href: '#project' },
+    { name: 'Contact', href: '#contact' },
 ]
 
 const Navbar = () => {
@@ -60,13 +61,13 @@ const Navbar = () => {
                         </div>
                         <div className="hidden md:ml-10 md:block md:space-x-8 md:pr-4">
                             {navigations.map((item) => (
-                                <a
+                                <Link
                                     key={item.name}
                                     href={item.href}
                                     className="font-light text-gray-500 hover:text-gray-900"
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                             ))}
                         </div>
                     </nav>
