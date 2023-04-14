@@ -1,3 +1,4 @@
+import { trunkString } from '@/utils'
 import clsx from 'clsx'
 import * as React from 'react'
 
@@ -28,7 +29,7 @@ export default function TOCLink({
             )}
             style={{ marginLeft: (level - minLevel) * 16 }}
         >
-            {text}
+            {trunkString(text, 20)}
         </a>
     )
 }

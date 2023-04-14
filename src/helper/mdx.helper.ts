@@ -50,3 +50,36 @@ export async function getFileBySlug(slug: string) {
         },
     }
 }
+
+export async function getRecommendations(currSlug: string) {
+    const frontmatters = await getContents()
+
+    // Get current frontmatter
+    const currentFm = frontmatters.find((fm) => fm.slug === currSlug)
+
+    // Remove currentFm and Bahasa Posts, then randomize order
+    const otherFms = frontmatters
+        .filter((fm) => fm.slug !== currSlug)
+        .sort(() => Math.random() - 0.5)
+
+    //Find with similar tags
+    const recommendations = otherFms.filter((op) =>
+        op.frontMatter.tags.some((p: string) =>
+            currentFm?.frontMatter.tags.includes(p)
+        )
+    )
+
+    // Populate with random recommendations if not enough
+    const threeRecommendations =
+        recommendations.length >= 3
+            ? recommendations
+            : [
+                  ...recommendations,
+                  ...otherFms.filter(
+                      (fm) => !recommendations.some((r) => r.slug === fm.slug)
+                  ),
+              ]
+
+    // Only return first three
+    return threeRecommendations.slice(0, 3)
+}

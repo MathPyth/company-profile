@@ -1,0 +1,62 @@
+---
+title: Exploratory Data Analysis Data Bencana Banjir di Indonesia
+date: 'August 4, 2021'
+description: artikel ini dibuat untuk publikasi casptone-project dari bootcamp Data Science Learning Studio yang diselenggarakan oleh komunitas data science terbesar di Indonesia, yaitu Data Science Indonesia (DSI)
+thumbnailUrl: 'https://wallpaperaccess.com/full/2537419.jpg'
+tags: ['bencana', 'machine learning']
+---
+
+# Kata Pengantar
+
+Sebelumnya, artikel ini dibuat untuk publikasi casptone-project dari bootcamp Data Science Learning Studio yang diselenggarakan oleh komunitas data science terbesar di Indonesia, yaitu Data Science Indonesia (DSI). Di mana tim saya diberikan kesempatan untuk menganalisis data Bencana oleh PetaBencana dan data Banjir oleh BNPB. Pada artikel ini saya akan membahas mengenai informasi-informasi yang didapatkan dari dataset yang diberikan oleh instansi Badan Nasional Penanggung Bencana (BNPB). Sebelum ke pembahasan utama kita perlu berkenalan dengan instansi yang satu ini terlebih dahulu.
+
+&gt;**Badan Nasional Penanggung Bencana (BNPB)** adalah sebuah Lembaga Pemerintah Nonkementrian yang mempunyai tugas membantu Presiden Republik Indonesia dalam melakukan penanggulangan bencana sesuai dengan amanat Undang-Undang Nomor 24 Tahun 2007 tentang Penanggulangan Bencana. Selengkapnya bisa dilihat pada laman resmi
+[BNPB](https://bnpb.go.id/).¹
+Untuk penyegaran kembali ada baiknya kita mengingat kembali apa itu _Exploratory Data Analysis_
+&gt;
+
+**Exploratory Data Analysis** adalah langkah penting dalam setiap analisis penelitian. Tujuan utama dengan analisis eksplorasi adalah untuk menguji data untuk distribusi, outlier dan anomali untuk mengarahkan pengujian spesifik hipotesis Anda. Ini juga menyediakan alat untuk pembuatan hipotesis dengan memvisualisasikan dan memahami data biasanya melalui representasi grafis.²
+
+# Data Understanding
+
+Sebelum melakukan EDA, kita perlu memahami data yang kita miliki dan mengetahui apa saja informasi yang bisa kita dapatkan pada suatu data tabular dengan mengetahui kolom-kolom apa saja yang dimiliki oleh data BNPB. Data yang diberikan oleh BNPB adalah data laporan banjir yang dikumpulkan oleh pihak BNPB dari berbagai daerah dalam periode 2020–2021\. Berikut adalah daftar kolom serta deskripsinya yang dimiliki oleh data BNPB:
+![](https://miro.medium.com/v2/resize:fit:700/1*LAIb7TTNb3y4aJ6znxDLSg.png)
+Deskripsi Data BNPB
+
+# **Exploratory Data Analysis (EDA)**
+
+Pada tahap ini saya fokus untuk melakukan ekplorasi pada peristiwa banjir, timeline peristiwa banjir dan dampak dari bencana ini. Sehingga tidak semua kolom yang ada pada dataset ini akan digunakan. Berikut adalah kolom yang digunakan selama EDA ini: _ Tanggal Kejadian _ Kejadian _ Meninggal _ Hilang _ Terluka _ Rumah Rusak \* Fasum Rusak Selama melakukan EDA saya mendapatkan beberapa informasi-informasi yang menarik, yang akan akan dijelaskan pada subbagian selanjutnya.
+
+## Banjir Banyak Terjadi di Awal Tahun dan Akhir Tahun
+
+![](https://miro.medium.com/v2/resize:fit:700/1*KecgzGyaSjOStFK7Z1uj9g.png)
+Timeline Kejadian Banjir pada Tahun 2020 dan 2021Berdasarkan _timeline barchart_ di atas, terjadi penurunan kejadian banjir di awal tahun 2021 dibandingkan dengan tahun lalu, namun di akhir tahun jumlah peristiwa banjir melebihi tahun lalu, tepatnya di bulan September, November dan Desember. Kenaikan paling besar terjadi di bulan November, yaitu sebesar 82% yang mana di tahun lalu ada 125 peristiwa sedangkan tahun 2021 ada sebanyak 228 peristiwa. Selain itu dari dua tahun terakhir kejadian banjir lebih banyak terjadi di awal tahun dan di akhir tahun.
+
+## Jumlah Rumah Rusak dan Orang Terluka Merupakan Dampak Terbesar
+
+![](https://miro.medium.com/v2/resize:fit:700/1*ydEfdoATBuAxf-o0rlVhSQ.jpeg)
+
+Grafik Perbandingan DampakPada data BNPB ini, saya membagi dampak yang disebabkan oleh bencana banjir menjadi dua jenis, yaitu dampak yang ditujukan kepada orang atau dampak korban dan dampak yang ditujukan kepada bangunan atau dampak kerusakan materil. Untuk jenis dampak korban paling besar adalah Orang Terluka yaitu sebanyak 1,730 orang sedangkan untuk dampak kerusakan materil paling besar adalah Rumah Rusak sebesar 12,6671 rumah.
+
+## Jumlah Bencana Banjir Menurun, tetapi Dampaknya Naik
+
+![](https://miro.medium.com/v2/resize:fit:700/0*jL238lISFIgqDqSH)
+
+Grafik Perbandingan Peristiwa Banjir pada Tahun 2020 dan 2021Dalam dua tahun terakhir jumlah peristiwa banjir menurun sebesar 15.5% yang mana di tahun 2020 ada sebanyak 1609 peristiwa dan di tahun 2021 ada sebanyak 1359 peristiwa. Namun penurunan tersebut tidak berlaku pada dampak yang dihasilkan oleh bencana ini, berikut adalah grafik perbandingan semua dampak yang ada di dua tahun terakhir
+
+![](https://miro.medium.com/v2/resize:fit:640/0*EWC3qz6khbJF3pOO)
+
+Grafik Perbandingan Dampak dari Banjir pada Tahun 2020 dan 2021Berdasarkan grafik perbadingan di atas, dapat dilihat bahwa semua dampak yang ada meningkat dari tahun sebelumnya. Dampak pada korban di tahun 2021 meningkat 3 kali lipat dari tahun sebelumnya. Sedangkan dampak kerusakan materil meningkat 2 kali lipat dari tahun sebelumnya.
+
+# Dashboard Semua visualisasi yang telah dibuat pada artikel ini disajikan dalam sebuah dashboard yang dibuat dengan PowerBI.
+
+![](https://miro.medium.com/v2/resize:fit:700/0*97jUYa8OuHoX4Ntj)
+
+Dashboard Peristiwa Bencana Banjir
+
+# References
+
+[1][https://en.wikipedia.org/wiki/indonesian_national_board_for_disaster_management]
+(https://en.wikipedia.org/wiki/Indonesian_National_Board_for_Disaster_Management)
+
+[2] Chong Ho, Yu. 2010\. “Exploratory data analysis in the context of data mining and resampling”. _Internatioanal Journal of Pychhological Research_. 3(1), 9–22.
