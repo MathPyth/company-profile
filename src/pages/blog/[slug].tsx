@@ -1,7 +1,6 @@
 import Typography from '@/components/atoms/Typography'
 import MDXComponents from '@/components/molecules/MDX/MDXComponents'
 import TableOfContents from '@/components/molecules/TableOfContents'
-import RecomendationPostsList from '@/components/organisms/RecomendationPostsList'
 import Layout from '@/components/template/Layout'
 import {
     getContents,
@@ -13,9 +12,17 @@ import useScrollSpy from '@/hooks/useScrollSpy'
 import { postsType } from '@/types'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+import dynamic from 'next/dynamic'
 import React from 'react'
 import { AiOutlineBook, AiOutlineClockCircle } from 'react-icons/ai'
 import { ReadTimeResults } from 'reading-time'
+
+const RecomendationPostsList = dynamic(
+    () => import('@/components/organisms/RecomendationPostsList'),
+    {
+        loading: () => <p>Loading...</p>,
+    }
+)
 
 export type frontMatterContentType = {
     wordCount: number
