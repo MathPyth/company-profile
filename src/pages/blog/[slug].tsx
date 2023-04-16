@@ -102,7 +102,7 @@ const index = ({
                             </div>
                         </aside>
                     </div>
-                    <div className="w-full ">
+                    <div className="w-full mt-12 border-slate-200 border-t">
                         <RecomendationPostsList posts={recomendationPosts} />
                     </div>
                 </main>
