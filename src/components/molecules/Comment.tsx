@@ -1,21 +1,20 @@
-import Giscus from '@giscus/react'
+import Giscus, { Repo, Theme } from '@giscus/react'
+
+
 
 export default function Comment() {
     return (
         <Giscus
-            id="comments"
-            repo="giscus/giscus-component"
-            repoId="MDEwOlJlcG9zaXRvcnkzOTEzMTMwMjA="
-            category="Announcements"
-            categoryId="DIC_kwDOF1L2fM4B-hVS"
-            mapping="specific"
-            term="Welcome to @giscus/react component!"
-            reactionsEnabled="1"
+            key={'light'}
+            repo={(process.env.NEXT_PUBLIC_GISCUS_REPO as Repo) || ''}
+            repoId={process.env.NEXT_PUBLIC_GISCUS_REPO_ID || ''}
+            category="General"
+            categoryId="DIC_kwDOJODPAs4CV1HN"
+            mapping="pathname"
+            reactionsEnabled="0"
             emitMetadata="0"
-            inputPosition="top"
-            theme="light"
-            lang="en"
-            loading="lazy"
+            theme={'light' as Theme}
+
         />
     )
 }

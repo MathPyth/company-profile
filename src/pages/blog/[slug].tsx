@@ -24,6 +24,10 @@ const RecomendationPostsList = dynamic(
     }
 )
 
+const Comment = dynamic(() => import('@/components/molecules/Comment'), {
+    loading: () => <p>Loading...</p>,
+})
+
 export type frontMatterContentType = {
     wordCount: number
     readingTime: ReadTimeResults
@@ -102,6 +106,10 @@ const index = ({
                             </div>
                         </aside>
                     </div>
+                    <div className="w-full mt-12 pt-12 border-slate-200 border-t">
+                        <Comment />
+                    </div>
+
                     <div className="w-full mt-12 border-slate-200 border-t">
                         <RecomendationPostsList posts={recomendationPosts} />
                     </div>
