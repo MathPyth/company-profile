@@ -109,6 +109,7 @@ const index = ({
                     <div className="w-full mt-12 pt-12 border-slate-200 border-t">
                         <Comment />
                     </div>
+
                     <div className="w-full mt-12 border-slate-200 border-t">
                         <RecomendationPostsList posts={recomendationPosts} />
                     </div>

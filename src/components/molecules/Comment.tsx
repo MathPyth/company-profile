@@ -1,5 +1,7 @@
 import Giscus, { Repo, Theme } from '@giscus/react'
 
+
+
 export default function Comment() {
     return (
         <Giscus
@@ -12,6 +14,7 @@ export default function Comment() {
             reactionsEnabled="0"
             emitMetadata="0"
             theme={'light' as Theme}
+
         />
     )
 }
