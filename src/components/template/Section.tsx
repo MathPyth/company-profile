@@ -3,19 +3,19 @@ import dynamic from 'next/dynamic'
 import React from 'react'
 
 const About = dynamic(() => import('../organisms/sections/About'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <p></p>,
 })
 
 const Jumbotron = dynamic(() => import('../organisms/sections/Jumbotron'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <p></p>,
 })
 
 const Porfofolio = dynamic(() => import('../organisms/sections/Porfofolio'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <p></p>,
 })
 
 const Posts = dynamic(() => import('../organisms/sections/Posts'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <p></p>,
 })
 
 const Section = ({ posts }: { posts: postsType[] }) => {
