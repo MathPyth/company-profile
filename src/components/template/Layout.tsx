@@ -17,7 +17,7 @@ const roboto = Inter({
 })
 
 const Footer = dynamic(() => import('../organisms/Footer'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <p></p>,
 })
 
 const Layout = (props: Props) => {

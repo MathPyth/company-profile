@@ -20,12 +20,12 @@ import { ReadTimeResults } from 'reading-time'
 const RecomendationPostsList = dynamic(
     () => import('@/components/organisms/RecomendationPostsList'),
     {
-        loading: () => <p>Loading...</p>,
+        loading: () => <p></p>,
     }
 )
 
 const Comment = dynamic(() => import('@/components/molecules/Comment'), {
-    loading: () => <p>Loading...</p>,
+    loading: () => <p></p>,
 })
 
 export type frontMatterContentType = {
@@ -107,7 +107,7 @@ const index = ({
                         </aside>
                     </div>
                     <div className="w-full mt-12 pt-12 border-slate-200 border-t">
-                        <Comment />
+                        <Comment key={frontmatter.slug as string} />
                     </div>
 
                     <div className="w-full mt-12 border-slate-200 border-t">

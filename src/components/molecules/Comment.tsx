@@ -1,11 +1,9 @@
 import Giscus, { Repo, Theme } from '@giscus/react'
 
-
-
-export default function Comment() {
+export default function Comment({ key }: { key: string }) {
     return (
         <Giscus
-            key={'light'}
+            key={key || ''}
             repo={(process.env.NEXT_PUBLIC_GISCUS_REPO as Repo) || ''}
             repoId={process.env.NEXT_PUBLIC_GISCUS_REPO_ID || ''}
             category="General"
@@ -14,7 +12,6 @@ export default function Comment() {
             reactionsEnabled="0"
             emitMetadata="0"
             theme={'light' as Theme}
-
         />
     )
 }
